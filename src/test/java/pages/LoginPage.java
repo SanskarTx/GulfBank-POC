@@ -16,6 +16,9 @@ public class LoginPage extends ElementInteractions
     @AndroidFindBy(accessibility = "Log in to Gulf Bank")
     private WebElement tv_logInToGulfBank;
 
+    @AndroidFindBy(accessibility = "Menu")
+    private WebElement btn_sideMenu;
+
     public LoginPage(AndroidDriver driver)
     {
         PageFactory.initElements(new AppiumFieldDecorator(driver),this);
@@ -27,8 +30,8 @@ public class LoginPage extends ElementInteractions
     }
 
 
-    public void validateLoginPageTitle()
+    public void navigateToSideDrawerPage()
     {
-        Assert.assertTrue(waitForElementToAppear(tv_logInToGulfBank,10));
+        Assert.assertTrue(waitForElementToAppearAndClick(btn_sideMenu,10));
     }
 }
