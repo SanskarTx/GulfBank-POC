@@ -19,6 +19,12 @@ public class LoginPage extends ElementInteractions
     @AndroidFindBy(accessibility = "Menu")
     private WebElement btn_sideMenu;
 
+    @AndroidFindBy(accessibility = "Testing Users")
+    private WebElement btn_testingUsers;
+
+    @AndroidFindBy(accessibility = "RETEST2 password: Welcome@00")
+    private WebElement btn_user;
+
     public LoginPage(AndroidDriver driver)
     {
         PageFactory.initElements(new AppiumFieldDecorator(driver),this);
@@ -29,9 +35,18 @@ public class LoginPage extends ElementInteractions
         Assert.assertTrue(waitForElementToAppearAndClick(btn_Login,10));
     }
 
-
     public void navigateToSideDrawerPage()
     {
         Assert.assertTrue(waitForElementToAppearAndClick(btn_sideMenu,10));
+    }
+
+    public void clickOnTestingUsers()
+    {
+        Assert.assertTrue(waitForElementToAppearAndClick(btn_testingUsers,10));
+    }
+
+    public void selectUser()
+    {
+        Assert.assertTrue(waitForElementToAppearAndClick(btn_user,10));
     }
 }

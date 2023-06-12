@@ -12,7 +12,6 @@ public class PaymentTest extends BaseTest
     @Test(description = "Validate user is able to transfer the amount to another user")
     public void transferTheAmountToUser()
     {
-
         LaunchPage launch = new LaunchPage(driver);
         launch.clickOnIAmGulfBankCustomer();
 
@@ -24,8 +23,12 @@ public class PaymentTest extends BaseTest
 
         SettingsPage settings = new SettingsPage(driver);
         settings.clickOnEnvironmentDropDown();
-        settings.scrollDropDownAndClick("OBDX 21.1");
+        settings.selectOBDXEnvironment();
 
         launch.clickOnIAmGulfBankCustomer();
+
+        login.clickOnTestingUsers();
+        login.selectUser();
+        login.clickOnLoginButton();
     }
 }

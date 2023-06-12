@@ -26,8 +26,8 @@ public class SettingsPage extends ElementInteractions
         Assert.assertTrue(waitForElementToAppearAndClick(btn_environmentDropDown,10));
     }
 
-    public void selectAnyEnvironment(String environment)
+    public void selectOBDXEnvironment()
     {
-      scrollDropDownAndClick(environment);
+      Assert.assertTrue(waitForElementToAppearAndClick(tv_envOBDX,10));
     }
 }
