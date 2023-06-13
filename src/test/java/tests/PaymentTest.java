@@ -13,7 +13,7 @@ public class PaymentTest extends BaseTest
     public void transferTheAmountToUser()
     {
         LaunchPage launch = new LaunchPage(driver);
-        launch.clickOnIAmGulfBankCustomer();
+        launch.clickOnIamGulfBankCustomer();
 
         LoginPage login = new LoginPage(driver);
         login.navigateToSideDrawerPage();
@@ -25,7 +25,7 @@ public class PaymentTest extends BaseTest
         settings.clickOnEnvironmentDropDown();
         settings.selectOBDXEnvironment();
 
-        launch.clickOnIAmGulfBankCustomer();
+        launch.clickOnIamGulfBankCustomer();
 
         login.clickOnTestingUsers();
         login.selectUser();

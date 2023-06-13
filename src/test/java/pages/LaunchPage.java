@@ -18,7 +18,7 @@ public class LaunchPage extends ElementInteractions
         PageFactory.initElements(new AppiumFieldDecorator(driver),this);
     }
 
-    public void  clickOnIAmGulfBankCustomer()
+    public void  clickOnIamGulfBankCustomer()
     {
         Assert.assertTrue(waitForElementToAppearAndClick(btn_iAmGulfCustomer,10));
     }
