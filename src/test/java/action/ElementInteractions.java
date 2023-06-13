@@ -1,6 +1,5 @@
 package action;
 
-import io.appium.java_client.MobileBy;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -40,13 +39,4 @@ public class ElementInteractions
         }
         return result;
     }
-
-    public void scrollDropDownAndClick(String search) {
-
-        WebElement element = driver.findElement(MobileBy.AndroidUIAutomator(
-                "new UiScrollable(new UiSelector()).scrollIntoView(new UiSelector().text(\"" + search + "\"))"));
-       // log.info("MobileElementInteractions.ScrollToElement() get text" + element.getText());
-        element.click();
-    }
-
 }
